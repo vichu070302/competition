@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova Style Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      background:#f9f6f1;
+      font-family:Arial,Helvetica,sans-serif;
+      overflow-x:hidden;
+    }
+    /* HERO BACKGROUND SHAPES */
+    .hero{
+      position:relative;
+      padding:130px 0 110px;
+      background:#f9f6f1;
+      overflow:hidden;
+    }
+    /* .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("data:image/svg+xml,%3Csvg width='1600' height='800' viewBox='0 0 1600 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 300C200 200 400 350 600 300 800 250 1000 150 1200 200 1400 250 1500 350 1600 300V0H0Z' fill='%23f3d9b1'/%3E%3Cpath d='M0 520C250 450 450 600 650 560 850 520 1050 420 1250 460 1450 500 1550 600 1600 560V800H0Z' fill='%23e7eefb'/%3E%3C/svg%3E") no-repeat center/cover;
+      z-index:0;
+    } */
+    .hero::after{content:none;}
+    .hero .container{position:relative;z-index:1}
+
+    .hero h1{font-weight:700}
+    .btn-main{background:#0d6efd;color:#fff;border-radius:50px;padding:12px 28px}
+    .card-box{border-radius:18px;border:0;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .icon{width:55px;height:55px;border-radius:50%;background:#e9f1ff;color:#0d6efd;display:flex;align-items:center;justify-content:center;font-size:24px;margin:auto}
+    .section{padding:80px 0}
+
+    .nov{
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:40px;
+    }
+    .rp{
+      font-size: 90px;
+    }
+    
+    body {
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(to right, #e6d9c2, #fffaf2);
+      padding: 90px 0;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+    }
+
+    /* Buttons */
+    .btn-main {
+      background: #2563eb;
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 28px;
+    }
+
+    .btn-main:hover {
+      background: #1e4fd6;
+      color: #fff;
+    }
+
+    /* Feature Cards */
+    .specializing {
+      background: linear-gradient(to bottom, #d8cdb9, #fffaf2);
+      padding: 100px 0;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 25px;
+      padding: 45px 30px;
+      box-shadow: 0 15px 35px rgba(1, 31, 255, 0.05);
+      position: relative;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 20%;
+      width: 60%;
+      height: 5px;
+      background: #d6ddff;
+      border-radius: 10px;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 45px rgba(81, 140, 237, 0.5);
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      background: #fff4dc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 20px;
+    }
+    .tf{
+      font-size:50px;
+      /* margin-bottom: 40%; */
+    }
+     .about{
+      /* padding-top: 60%; */
+    }
+
+    /* .ab1{
+      padding-bottom: 40%;
+    }  */
+
+
+    .p2{
+      text-align: center;
+    }
+
+    .hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='1600' height='900' viewBox='0 0 1600 900' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 310C180 210 420 360 640 310 860 260 1060 140 1240 190 1420 240 1500 310 1600 330V0H0Z' fill='%23f3d9b1'/%3E%3Cpath d='M0 600C220 500 460 660 720 610 980 560 1180 450 1360 490 1500 520 1560 600 1600 630V900H0Z' fill='%23e7eefb'/%3E%3C/svg%3E") no-repeat center/cover;
+  z-index:0;
+}
+
+   .bell{
+    padding-left: 20px;
+   }
+   .shop{
+    padding-left: 10px;
+   }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-light fixed-top shadow-sm">
+  <div class="container">
+    <img src="logo.png" alt="" height="40px" width="40px">
+    <a class="navbar-brand fw-bold text-primary nov" href="#">Nova</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Feature</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="shop"><img src="icons8-shopping-cart-25.png" alt=""></li> <hr> <hr> <hr>
+        <li class="bell"><img src="icons8-bell-25.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero mt-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="rp">Ready for any web projects</h1>
+        <p class="text-muted mt-3 p1">We're a design studio that creates beautiful digital products, brands and experiences for amazing companies and disruptive startups</p>
+        <a href="#" class="btn btn-main mt-3">Get Started</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="fstimg-removebg-preview.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="specializing">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Specializing In</h2>
+    <p class="text-muted mb-5 mx-auto" style="max-width: 650px; text-align: center;">
+      Stop wasting time and money designing and managing a <br> website that
+      doesn't get results. Happiness guaranteed!
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="icon">🎨</div>
+          <h5 class="fw-bold">Graphics Design</h5>
+          <p class="text-muted">Short description for the ones who look for something new.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="icon">🖨️</div>
+          <h5 class="fw-bold">Print Design</h5>
+          <p class="text-muted">Short description for the ones who look for something new.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="icon">📊</div>
+          <h5 class="fw-bold">Business Analysis</h5>
+          <p class="text-muted">Short description for the ones who look for something new.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="icon">💻</div>
+          <h5 class="fw-bold">Web Development</h5>
+          <p class="text-muted">Short description for the ones who look for something new.</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="icon">🔒</div>
+          <h5 class="fw-bold">Best Security</h5>
+          <p class="text-muted">Short description for the ones who look for something new.</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="icon">🎨</div>
+          <h5 class="fw-bold">Web Design</h5>
+          <p class="text-muted">Short description for the ones who look for something new.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="row align-items-center about">
+      <div class="col-md-6 ab1">
+        <h2 class="tf">The future of designing starts here</h2> <br>
+        <div class="abim">
+        <h5 class="sh">Stop wasting time and money designing and managing a website that doesn't get results. Happiness guaranteed,</h5>
+        <ul class="mt-3 text-muted"> <br>
+          <li>Stop wasting time and money</li>
+          <li>Modern & responsive design</li>
+          <li>Happiness guaranteed</li>
+          <li>Modern & responsive design</li>
+          <li>Happiness guaranteed\</li>
+        </ul>
+        
+        <a href="#" class="btn btn-main mt-3">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="about-img.svg" class="img-fluid" alt="">
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">Get in touch</h2>
+    <p class="p2">Stop wasting time and money designing and managing a website that <br> doesn't get results. Happiness guaranteed!</p>
+    <div class="row">
+      <div class="col-md-8">
+        <form class="row g-3">
+          <div class="col-md-6"><input class="form-control" placeholder="Name"></div>
+          <div class="col-md-6"><input class="form-control" placeholder="Email"></div>
+          <div class="col-md-6"><input class="form-control" placeholder="Number"></div>
+          <div class="col-md-6"><input class="form-control" placeholder="Subject"></div>
+          <div class="col-12"><textarea class="form-control" rows="4" placeholder="Message"></textarea></div>
+          <div class="col-12"><button class="btn btn-main">Submit</button></div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-box p-3 mb-3">📞 +91 9087654321</div>
+        <div class="card card-box p-3 mb-3">✉ vishnu@gmail.com</div>
+        <div class="card card-box p-3">📍 vp's House,13/5 Road,Sidny Kerala,Palakkad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

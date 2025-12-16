@@ -1,0 +1,91 @@
+/* =========================
+   NAVBAR HOVER
+========================= */
+.navbar .nav-link {
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #2563eb;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   BUTTON HOVER (PREMIUM)
+========================= */
+.btn-main {
+  transition: all 0.35s ease;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================
+   FEATURE CARD HOVER
+========================= */
+.feature-card {
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 35px 60px rgba(37, 99, 235, 0.18);
+}
+
+/* =========================
+   ICON HOVER (INSIDE CARD)
+========================= */
+.feature-card .icon {
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .icon {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.1) rotate(6deg);
+}
+
+/* =========================
+   CONTACT CARD HOVER
+========================= */
+.card-box {
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  background: #f8faff;
+}
+
+/* =========================
+   IMAGE HOVER (SOFT FLOAT)
+========================= */
+.hero img,
+.about img {
+  transition: transform 0.5s ease;
+}
+
+.hero img:hover,
+.about img:hover {
+  transform: translateY(-10px) scale(1.02);
+}
